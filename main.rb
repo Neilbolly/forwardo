@@ -1,6 +1,5 @@
 require 'telegram/bot'
 require 'concurrent'
-require 'dotenv/load'
 
 puts "Bot Started...."
 token = "6456252632:AAErhNJQEZsoKkeXCwvupe88pxILtTEX-n0"
