@@ -23,7 +23,7 @@ while true
               thr_3 = ""
                 begin
                   Thread.new do
-                    (49310..73670).each do |i|
+                    (51652..73670).each do |i|
                       thr_2 = i
                       begin
                         bot.api.copy_message(
@@ -55,7 +55,7 @@ while true
                   end
                   # 3309..36526
                   Thread.new do
-                    (15549..36526).each do |i|
+                    (17957..36526).each do |i|
                       thr_1 = i
                       begin
                         bot.api.copy_message(
@@ -87,7 +87,7 @@ while true
                   end
                 
                   Thread.new do
-                    (83783..109372).each do |i|
+                    (86174..109372).each do |i|
                       thr_3 = i
                       begin
                         bot.api.copy_message(
@@ -130,7 +130,7 @@ while true
                           bot.api.edit_message_text(
                             chat_id: -1001779636714,
                             message_id: 4173,
-                            text: "📊 <b>Forwarding Stats</b>\n<blockquote><b>Phase 1 :- </b>#{thr_1}/36526 files added\n<b>Phase 2 :-</b> #{thr_2}/73670 files added\n<b>Phase 3 :- </b>#{thr_3}/109372 files added</blockquote>\n<blockquote><b>Total number of files added :-</b> #{(36526-thr_1.to_i).to_i + (73670-thr_2.to_i).to_i + (109372-thr_3.to_i).to_i} files</blockquote>",
+                            text: "📊 <b>Forwarding Stats</b>\n<blockquote><b>Phase 1 :- </b>#{thr_1}/36526 files added\n<b>Phase 2 :-</b> #{thr_2}/73670 files added\n<b>Phase 3 :- </b>#{thr_3}/109372 files added</blockquote>\n<blockquote><b>Total number of files added :-</b> #{(thr_1.to_i).to_i + (thr_2.to_i-36526).to_i + (thr_3.to_i-73670).to_i} files</blockquote>",
                             parse_mode: 'HTML'
                           )
                           last_content = new_content # Update the last_content variable
